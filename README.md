@@ -114,7 +114,7 @@
   Studio Code.
 </p>
 
-<pre><code>git clone [Your GitHub Repository Link]</code></pre>
+<pre><code>https://object-compatibility-test.vercel.app/</code></pre>
 
 <p>
   No additional packages or dependencies are required.
