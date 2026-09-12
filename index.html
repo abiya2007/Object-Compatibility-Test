@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Object Compatibility Test</title>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head><body><div class="app"><!-- HEADER -->
+
+<div class="header">
+
+    <div class="logo">
+        💘
+    </div>
+
+    <h1>
+        OBJECT
+        <br>
+        <span>COMPATIBILITY</span>
+    </h1>
+
+    <p>
+        Because objects deserve love too.
+    </p>
+
+</div>
+
+
+
+<!-- MAIN CARD -->
+
+<div class="card">
+
+
+    <div class="objects">
+
+
+        <!-- OBJECT 1 -->
+
+        <div class="object-box">
+
+            <div class="image-container">
+
+                <div
+                    id="placeholder1"
+                    class="placeholder"
+                >
+                    ❓
+                </div>
+
+                <img
+                    id="image1"
+                    class="object-image"
+                    src=""
+                    alt="First object"
+                >
+
+            </div>
+
+
+            <input
+                type="text"
+                id="object1"
+                placeholder="Enter first object..."
+                maxlength="40"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- HEART -->
+
+        <div class="heart">
+            ❤️
+        </div>
+
+
+
+        <!-- OBJECT 2 -->
+
+        <div class="object-box">
+
+            <div class="image-container">
+
+                <div
+                    id="placeholder2"
+                    class="placeholder"
+                >
+                    ❓
+                </div>
+
+                <img
+                    id="image2"
+                    class="object-image"
+                    src=""
+                    alt="Second object"
+                >
+
+            </div>
+
+
+            <input
+                type="text"
+                id="object2"
+                placeholder="Enter second object..."
+                maxlength="40"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="versus">
+        VS
+    </div>
+
+
+
+    <!-- RANDOM INPUT -->
+
+    <button
+        class="random-button"
+        onclick="randomInput()"
+    >
+        🎲 RANDOM INPUT
+    </button>
+
+
+
+    <!-- TEST BUTTON -->
+
+    <button
+        id="testButton"
+        onclick="testCompatibility()"
+    >
+        💘 TEST COMPATIBILITY
+    </button>
+
+
+
+    <!-- LOADING -->
+
+    <div
+        id="loading"
+        class="loading hidden"
+    >
+
+        <div class="spinner"></div>
+
+        <p>
+            Analyzing their relationship...
+        </p>
+
+        <small>
+            Consulting completely unqualified scientists...
+        </small>
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <div
+        id="result"
+        class="result hidden"
+    >
+
+        <div
+            id="percentage"
+            class="percentage"
+        >
+            99%
+        </div>
+
+
+        <div
+            id="resultTitle"
+            class="result-title"
+        >
+            SOULMATES
+        </div>
+
+
+        <p id="resultText"></p>
+
+
+        <div class="meter">
+
+            <div id="meterFill"></div>
+
+        </div>
+
+
+        <button
+            class="again"
+            onclick="resetTest()"
+        >
+            🔄 TRY AGAIN
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- RANDOM INFO -->
+
+<div class="random-info">
+
+    <p>
+        Don't know what to enter?
+    </p>
+
+    <span>
+        Let our highly unreliable system choose for you.
+    </span>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    ⚠️ 100% scientifically useless
+
+</div>
+
+</div><script src="script.js"></script></body></html>

@@ -1,0 +1,767 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+
+min-height: 100vh;
+
+font-family: Arial, sans-serif;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+padding: 25px;
+
+color: white;
+
+background:
+    radial-gradient(
+        circle at top,
+        #521574,
+        #1c0025 55%,
+        #08000d
+    );
+
+}
+
+.app {
+
+width: 100%;
+
+max-width: 780px;
+
+text-align: center;
+
+}
+
+/* =========================
+HEADER
+========================= */
+
+.header {
+
+margin-bottom: 25px;
+
+}
+
+.logo {
+
+font-size: 55px;
+
+animation:
+    floating 2s infinite ease-in-out;
+
+}
+
+.header h1 {
+
+font-size: 42px;
+
+line-height: 0.95;
+
+letter-spacing: 3px;
+
+}
+
+.header h1 span {
+
+color: #ff5bd8;
+
+}
+
+.header p {
+
+margin-top: 12px;
+
+color: #cbb9d2;
+
+font-size: 15px;
+
+}
+
+/* =========================
+CARD
+========================= */
+
+.card {
+
+padding: 35px;
+
+border-radius: 25px;
+
+background:
+    rgba(255,255,255,0.08);
+
+border:
+    1px solid rgba(255,255,255,0.15);
+
+backdrop-filter: blur(15px);
+
+box-shadow:
+    0 25px 70px rgba(0,0,0,0.45);
+
+}
+
+/* =========================
+OBJECT AREA
+========================= */
+
+.objects {
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 20px;
+
+}
+
+.object-box {
+
+width: 250px;
+
+min-height: 230px;
+
+padding: 20px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+border-radius: 20px;
+
+background:
+    rgba(255,255,255,0.08);
+
+border:
+    2px solid rgba(255,255,255,0.12);
+
+transition: 0.3s;
+
+}
+
+.object-box:hover {
+
+transform:
+    translateY(-5px);
+
+border-color:
+    #ff5bd8;
+
+box-shadow:
+    0 10px 30px
+    rgba(255,91,216,0.15);
+
+}
+
+/* =========================
+IMAGE
+========================= */
+
+.image-container {
+
+width: 150px;
+
+height: 125px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+margin-bottom: 15px;
+
+}
+
+.placeholder {
+
+font-size: 65px;
+
+opacity: 0.7;
+
+}
+
+.object-image {
+
+width: 150px;
+
+height: 120px;
+
+object-fit: contain;
+
+border-radius: 15px;
+
+display: none;
+
+animation:
+    imageAppear 0.5s ease;
+
+}
+
+/* =========================
+INPUT
+========================= */
+
+input {
+
+width: 100%;
+
+padding: 14px;
+
+border: none;
+
+outline: none;
+
+border-radius: 10px;
+
+text-align: center;
+
+font-size: 15px;
+
+font-weight: bold;
+
+color: #350044;
+
+background: white;
+
+}
+
+input:focus {
+
+box-shadow:
+    0 0 0 3px #ff5bd8;
+
+}
+
+input::placeholder {
+
+color: #999;
+
+}
+
+/* =========================
+HEART
+========================= */
+
+.heart {
+
+font-size: 38px;
+
+animation:
+    heartbeat 1s infinite;
+
+}
+
+/* =========================
+VS
+========================= */
+
+.versus {
+
+margin: 25px 0;
+
+color: #a999ae;
+
+font-size: 14px;
+
+letter-spacing: 5px;
+
+font-weight: bold;
+
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+button {
+
+width: 100%;
+
+border: none;
+
+cursor: pointer;
+
+font-weight: bold;
+
+transition: 0.25s;
+
+}
+
+/* TEST */
+
+#testButton {
+
+margin-top: 12px;
+
+padding: 17px;
+
+border-radius: 12px;
+
+color: white;
+
+font-size: 16px;
+
+letter-spacing: 1px;
+
+background:
+    linear-gradient(
+        90deg,
+        #ff4fce,
+        #9149e8
+    );
+
+}
+
+#testButton:hover {
+
+transform:
+    scale(1.02);
+
+box-shadow:
+    0 10px 30px
+    rgba(255,79,207,0.4);
+
+}
+
+/* RANDOM */
+
+.random-button {
+
+padding: 13px;
+
+border-radius: 10px;
+
+color: #350044;
+
+background: white;
+
+font-size: 14px;
+
+}
+
+.random-button:hover {
+
+transform:
+    translateY(-3px);
+
+}
+
+/* =========================
+LOADING
+========================= */
+
+.loading {
+
+margin-top: 30px;
+
+padding: 20px;
+
+}
+
+.spinner {
+
+width: 48px;
+
+height: 48px;
+
+margin: auto;
+
+border-radius: 50%;
+
+border:
+    5px solid
+    rgba(255,255,255,0.15);
+
+border-top-color:
+    #ff5bd8;
+
+animation:
+    spin 1s linear infinite;
+
+}
+
+.loading p {
+
+margin-top: 15px;
+
+font-weight: bold;
+
+}
+
+.loading small {
+
+display: block;
+
+margin-top: 7px;
+
+color: #a995ad;
+
+}
+
+/* =========================
+RESULT
+========================= */
+
+.result {
+
+margin-top: 30px;
+
+animation:
+    appear 0.5s ease;
+
+}
+
+.percentage {
+
+font-size: 85px;
+
+font-weight: 900;
+
+color: #ff5bd8;
+
+text-shadow:
+    0 0 35px
+    rgba(255,91,216,0.5);
+
+}
+
+.result-title {
+
+margin-top: 5px;
+
+font-size: 22px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+
+}
+
+.result p {
+
+margin: 12px auto 20px;
+
+max-width: 520px;
+
+color: #d7c9dc;
+
+line-height: 1.5;
+
+}
+
+/* =========================
+COMPATIBILITY METER
+========================= */
+
+.meter {
+
+width: 100%;
+
+height: 14px;
+
+overflow: hidden;
+
+border-radius: 20px;
+
+background:
+    rgba(255,255,255,0.12);
+
+}
+
+#meterFill {
+
+width: 0%;
+
+height: 100%;
+
+border-radius: 20px;
+
+background:
+    linear-gradient(
+        90deg,
+        #ff4fcf,
+        #ff9de9
+    );
+
+transition:
+    width 1.5s ease;
+
+}
+
+/* =========================
+AGAIN
+========================= */
+
+.again {
+
+width: auto;
+
+margin-top: 20px;
+
+padding: 13px 25px;
+
+border-radius: 10px;
+
+color: white;
+
+background:
+    rgba(255,255,255,0.1);
+
+}
+
+.again:hover {
+
+background:
+    rgba(255,255,255,0.2);
+
+}
+
+/* =========================
+INFO
+========================= */
+
+.random-info {
+
+margin-top: 22px;
+
+color: #b9a7c0;
+
+}
+
+.random-info p {
+
+font-weight: bold;
+
+}
+
+.random-info span {
+
+display: block;
+
+margin-top: 5px;
+
+font-size: 12px;
+
+color: #76657c;
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+
+margin-top: 20px;
+
+color: #75617b;
+
+font-size: 12px;
+
+}
+
+/* =========================
+HIDDEN
+========================= */
+
+.hidden {
+
+display: none;
+
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+@keyframes spin {
+
+to {
+
+    transform:
+        rotate(360deg);
+
+}
+
+}
+
+@keyframes heartbeat {
+
+0%,
+100% {
+
+    transform:
+        scale(1);
+
+}
+
+50% {
+
+    transform:
+        scale(1.25);
+
+}
+
+}
+
+@keyframes floating {
+
+0%,
+100% {
+
+    transform:
+        translateY(0);
+
+}
+
+50% {
+
+    transform:
+        translateY(-8px);
+
+}
+
+}
+
+@keyframes appear {
+
+from {
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+
+}
+
+to {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+}
+
+@keyframes imageAppear {
+
+from {
+
+    opacity: 0;
+
+    transform:
+        scale(0.7);
+
+}
+
+to {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+body {
+
+    padding: 15px;
+
+}
+
+
+.header h1 {
+
+    font-size: 32px;
+
+}
+
+
+.card {
+
+    padding: 20px;
+
+}
+
+
+.objects {
+
+    gap: 7px;
+
+}
+
+
+.object-box {
+
+    width: 46%;
+
+    min-height: 200px;
+
+    padding: 12px;
+
+}
+
+
+.image-container {
+
+    width: 110px;
+
+    height: 100px;
+
+}
+
+
+.object-image {
+
+    width: 110px;
+
+    height: 95px;
+
+}
+
+
+.placeholder {
+
+    font-size: 50px;
+
+}
+
+
+.heart {
+
+    font-size: 25px;
+
+}
+
+
+.percentage {
+
+    font-size: 65px;
+
+}
+
+}
